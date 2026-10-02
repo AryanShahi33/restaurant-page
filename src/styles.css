@@ -39,11 +39,6 @@ span {
     border: 4px white solid;
 }
 
-.hours {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .banner {
     display: flex;

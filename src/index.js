@@ -1,8 +1,36 @@
-// import {navigation,description,location} from "./homePage.js"
-import {menu,starterContainer,saladContainer,mainCourseC,beverageContainer} from "./menuPage.js"
+import {header,content,bannerContainer,navigation,description,locationContainer,hours} from "./homePage.js"
+import {menuContent,menu,starterContainer,saladContainer,mainCourseC,beverageContainer} from "./menuPage.js"
 import "./styles.css";
 console.log("test");
+let body = document.body;
+body.appendChild(content);
+header.appendChild(navigation);
+content.appendChild(bannerContainer);
+content.appendChild(description);
+content.appendChild(hours);
+content.appendChild(locationContainer);
+
 let menuButton = document.querySelector("#menu");
 menuButton.addEventListener("click", () => {
-    document.querySelector(".content").remove();
+    if (document.querySelector(".content") != null);{
+        document.querySelector(".content").remove();
+    }
+    body.appendChild(menuContent);
+    menuContent.appendChild(menu);
+    menuContent.appendChild(starterContainer);
+    menu.appendChild(saladContainer);
+    menu.appendChild(mainCourseC);
+    menu.appendChild(beverageContainer);
 });
+
+let homeButton = document.querySelector("#home");
+homeButton.addEventListener("click", () => {
+    if (document.querySelector(".content") != null){
+        document.querySelector(".content").remove();
+    }
+    body.appendChild(content);
+    content.appendChild(bannerContainer);
+    content.appendChild(description);
+    content.appendChild(hours);
+    content.appendChild(locationContainer);
+})

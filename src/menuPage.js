@@ -1,10 +1,11 @@
+
+let body = document.body;
 let menu = document.createElement("div");
 menu.classList = "menu";
-let content = document.querySelector(".content");
-content.appendChild(menu);
+let menuContent = document.createElement("div");
+menuContent.classList = "content";
 let starterContainer = document.createElement("div");
 starterContainer.classList = "starterContainer";
-menu.appendChild(starterContainer);
 let starterHeader = document.createElement("h2");
 starterHeader.textContent = "Starters";
 starterContainer.appendChild(starterHeader);
@@ -22,7 +23,6 @@ saladContainer.classList = "saladContainer";
 let saladHeader = document.createElement("h2");
 saladHeader.textContent = "Salads";
 saladContainer.appendChild(saladHeader);
-menu.appendChild(saladContainer);
 let salads = document.createElement("p");
 salads.textContent = "Greek Salad";
 saladContainer.appendChild(salads);
@@ -35,7 +35,6 @@ saladContainer.appendChild(salads);
 
 let mainCourseC = document.createElement("div");
 mainCourseC.classList = "mainCourseC";
-menu.appendChild(mainCourseC);
 let mainCourseH = document.createElement("h2");
 mainCourseH.textContent = "Main Course";
 mainCourseC.appendChild(mainCourseH);
@@ -54,7 +53,6 @@ mainCourseC.appendChild(mainCourse);
 
 let beverageContainer = document.createElement("div");
 beverageContainer.classList = "beverageContainer";
-menu.appendChild(beverageContainer);
 let beverageHeader = document.createElement("h2");
 beverageHeader.textContent = "Beverages";
 beverageContainer.appendChild(beverageHeader);
@@ -71,4 +69,4 @@ beverage = document.createElement("p");
 beverage.textContent = "Lemon Tea";
 beverageContainer.appendChild(beverage);
 
-export {menu,starterContainer,saladContainer,mainCourseC,beverageContainer};
+export {menuContent,menu,starterContainer,saladContainer,mainCourseC,beverageContainer};

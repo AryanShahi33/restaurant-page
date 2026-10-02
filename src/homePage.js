@@ -1,4 +1,5 @@
 let navigation = document.querySelector(".navigation");
+let header = document.querySelector(".header");
 let home = document.createElement("button");
 home.textContent = "Home";
 home.id = "home";
@@ -10,6 +11,7 @@ navigation.appendChild(menu);
 let about = document.createElement("button");
 about.textContent = "About";
 about.id = "about";
+header.appendChild(navigation);
 navigation.appendChild(about);
 
 let content = document.querySelector(".content");
@@ -18,10 +20,10 @@ bannerContainer.classList = "banner";
 let banner = document.createElement("h1");
 banner.textContent = "XYZ Restaurant";
 bannerContainer.appendChild(banner);
-content.appendChild(bannerContainer);
+// content.appendChild(bannerContainer);
 let description = document.createElement("div");
 description.id = "description";
-content.appendChild(description);
+// content.appendChild(description);
 let p = document.createElement("p");
 p.textContent = "Welcome To XYZ Restaurant";
 description.appendChild(p);
@@ -30,6 +32,7 @@ p.textContent = "Authentic Home Made Fresh Food"
 description.appendChild(p);
 
 let hours = document.createElement("div");
+hours.classList = "hours";
 let openingHours = document.createElement("span");
 openingHours.textContent = "Hours"
 hours.appendChild(openingHours);
@@ -54,11 +57,11 @@ hours.appendChild(openingHours);
 openingHours = document.createElement("span");
 openingHours.textContent = "Saturday: 8am - 8pm"
 hours.appendChild(openingHours);
-content.appendChild(hours);
+// content.appendChild(hours);
 
 let locationContainer = document.createElement("div");
 locationContainer.classList = "location";
-content.appendChild(locationContainer);
+// content.appendChild(locationContainer);
 let location = document.createElement("h2");
 location.textContent = "Location";
 locationContainer.appendChild(location);
@@ -66,4 +69,4 @@ let address = document.createElement("div");
 address.textContent = "123 Rockford Hills";
 locationContainer.appendChild(address);
 
-export {navigation,description,location};
+export {content,bannerContainer,navigation,description,locationContainer,hours,header};
