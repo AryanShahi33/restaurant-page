@@ -28,7 +28,7 @@ let p = document.createElement("p");
 p.textContent = "Welcome To XYZ Restaurant";
 description.appendChild(p);
 p = document.createElement("p");
-p.textContent = "Authentic Home Made Fresh Food"
+p.textContent = "Tasty dining on a budget!"
 description.appendChild(p);
 
 let hours = document.createElement("div");

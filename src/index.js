@@ -1,5 +1,6 @@
 import {header,content,bannerContainer,navigation,description,locationContainer,hours} from "./homePage.js"
 import {menuContent,menu,starterContainer,saladContainer,mainCourseC,beverageContainer} from "./menuPage.js"
+import {aboutContent,contactContainer} from "./aboutPage.js"
 import "./styles.css";
 console.log("test");
 let body = document.body;
@@ -33,4 +34,13 @@ homeButton.addEventListener("click", () => {
     content.appendChild(description);
     content.appendChild(hours);
     content.appendChild(locationContainer);
+})
+
+let aboutButton = document.querySelector("#about");
+aboutButton.addEventListener("click", () => {
+    if (document.querySelector(".content") != null){
+        document.querySelector(".content").remove();
+    }
+    body.appendChild(aboutContent);
+    aboutContent.appendChild(contactContainer);
 })
