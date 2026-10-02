@@ -1,7 +1,8 @@
-import {navigation,description,location} from "./homePage.js"
+// import {navigation,description,location} from "./homePage.js"
+import {menu,starterContainer,saladContainer,mainCourseC,beverageContainer} from "./menuPage.js"
 import "./styles.css";
 console.log("test");
-let menu = document.querySelector("#menu");
-menu.addEventListener("click", () => {
+let menuButton = document.querySelector("#menu");
+menuButton.addEventListener("click", () => {
     document.querySelector(".content").remove();
 });
