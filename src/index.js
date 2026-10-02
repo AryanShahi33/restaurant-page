@@ -18,9 +18,9 @@ menuButton.addEventListener("click", () => {
     }
     body.appendChild(menuContent);
     menuContent.appendChild(menu);
-    menuContent.appendChild(starterContainer);
-    menu.appendChild(saladContainer);
+    menu.appendChild(starterContainer);
     menu.appendChild(mainCourseC);
+    menu.appendChild(saladContainer);
     menu.appendChild(beverageContainer);
 });
 
