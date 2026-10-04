@@ -1,4 +1,5 @@
  import path from 'node:path';
+ import HtmlWebpackPlugin from "html-webpack-plugin";
  import { fileURLToPath } from 'node:url';
 
  const __filename = fileURLToPath(import.meta.url);
@@ -7,9 +8,6 @@
  export default {
    entry: {
      app: './src/index.js',
-   },
-   experiments: {
-     html: true,
    },
    output: {
      filename: '[name].bundle.js',
@@ -24,4 +22,21 @@
        title: 'Production',
      },
    },
+    plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/template.html",
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.html$/i,
+        use: ["html-loader"],
+      },
+    ]
+  }
  };
